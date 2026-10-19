@@ -10,9 +10,20 @@ services:
   txt-to-json:
     image: ghcr.io/markokroselj/menu-app-backend/txt-to-json:1.0.0
     container_name: text-to-json
-    command: ["/data/input.txt", "/data/output.json"]
+    command: [ "/data/input.txt", "/data/output.json" ]
     volumes:
       - ./data:/data
     depends_on:
       pdf-to-txt:
+        condition: service_completed_successfully
+
+  deployment:
+    image: ghcr.io/markokroselj/menu-app-backend/deployment:1.0.0
+    container_name: deployment
+    volumes:
+      - ./data:/data
+    env_file:
+      - deploy/.env
+    depends_on:
+      txt-to-json:
         condition: service_completed_successfully

@@ -23,10 +23,11 @@ services:
     volumes:
       - ./data:/data
     env_file:
-      - deploy/.env
+      - .env
     depends_on:
       txt-to-json:
         condition: service_completed_successfully
+  
   clean-up:
     image: busybox:1.38.0
     volumes:

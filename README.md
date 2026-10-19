@@ -16,9 +16,13 @@ Menu PDF ──► pdfminer ──► .txt ──► Java parser ──► .json
 ## Usage 
 
 1. Download Docker compose file
-``curl -O https://raw.githubusercontent.com/markokroselj/menu-app-backend/main/compose.yml``.
-2. Download .env template.1
-``curl -o .env https://raw.githubusercontent.com/markokroselj/menu-app-backend/main/deploy/.env.example``.
+```bash
+curl -O https://raw.githubusercontent.com/markokroselj/menu-app-backend/main/compose.yml
+```
+2. Download .env template.
+```bash
+curl -o .env https://raw.githubusercontent.com/markokroselj/menu-app-backend/main/deploy/.env.example
+```
 3. Replace secrets in `.env` with yours.
 4. Make `date` directory. `mkdir data`.
 5. Copy menu PDF to data dir and name it `download.pdf`.

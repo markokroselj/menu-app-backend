@@ -27,3 +27,11 @@ services:
     depends_on:
       txt-to-json:
         condition: service_completed_successfully
+  clean-up:
+    image: busybox:1.38.0
+    volumes:
+      - ./data:/data
+    command: [ "sh", "-c", "find /data -mindepth 1 -delete" ]
+    depends_on:
+      deployment:
+        condition: service_completed_successfully

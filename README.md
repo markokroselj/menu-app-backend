@@ -24,6 +24,6 @@ curl -O https://raw.githubusercontent.com/markokroselj/menu-app-backend/main/com
 curl -o .env https://raw.githubusercontent.com/markokroselj/menu-app-backend/main/deploy/.env.example
 ```
 3. Replace secrets in `.env` with yours.
-4. Make `date` directory. `mkdir data`.
+4. Make `date` directory `mkdir data`.
 5. Copy menu PDF to data dir and name it `download.pdf`.
-6. Run run pipeline with ``docker compose up``.
+6. Run pipeline with ``docker compose up``.

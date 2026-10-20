@@ -9,7 +9,7 @@ Menu PDF ──► pdfminer ──► .txt ──► Java parser ──► .json
 ```
  
 1. **PDF to text.** The monthly menu PDF is converted to a plain text file with [pdfminer](https://pypi.org/project/pdfminer/).
-2. **Text to JSON.** A [Java](./textToJson/) program parses the text file and produces the structured menu JSON.
+2. **Text to JSON.** [Java](./textToJson/) program parses the text file and produces the structured menu JSON.
 3. **Upload.** The JSON file is uploaded to the HTTP server over SFTP.
 4. **Rebuild.** A `curl` call to a webhook triggers a new Vercel build of the <abbr title="Server Site Generation">SSG</abbr> frontend, so the site picks up the new menu.
 
